@@ -27,8 +27,10 @@ class Stack
             $this->head = $nodo;
             $this->tail = $nodo;
         } else {
-            $nodo->setNext($this->head);
-            $this->head = $nodo;
+            if ($this->tail instanceof Nodo) {
+                $this->tail->setNext($nodo);
+                $this->tail = $nodo;
+            }
         }
     }
 

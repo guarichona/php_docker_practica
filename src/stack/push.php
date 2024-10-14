@@ -11,7 +11,7 @@ $stack = new Stack(readJson());
 
 // // var_dump($_POST);
 
-$stack->push($_POST['value']);
+$stack->push(["value" => $_POST['value']]);
 
 echo $stack->print();
 
